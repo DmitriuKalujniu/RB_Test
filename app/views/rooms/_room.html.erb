@@ -1,0 +1,16 @@
+<tr>
+  <th scope="row"><%= room.id %></th>
+  <td><%= room.name %></td>
+  <td><%= room.link %></td>
+  <td><%= room.reviews.count %></td>
+  <td>
+    <%= link_to 'Show', room, class: "btn btn-primary mb-3" %>
+    <%= link_to 'Edit', edit_room_path(room), class: "btn btn-info mb-3" %>
+    <%= link_to "Destroy", room_path(room), class: "btn btn-danger mb-3", data: {
+      turbo_method: :delete,
+      turbo_confirm: "Are you sure?",
+      class: 'btn btn-danger'
+    }%>
+
+  </td>
+</tr>

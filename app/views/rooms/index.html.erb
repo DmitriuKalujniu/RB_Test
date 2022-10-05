@@ -1,0 +1,27 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Rooms</h1>
+<div class="col-4">
+  <%= link_to "create new room", { :controller => :rooms, :action => :new }, { class: "btn btn-primary mb-3" } %>
+</div>
+
+<div id="rooms">
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Link</th>
+      <th scope="col">Reviews</th>
+      <th scope="col align-left">Controls</th>
+    </tr>
+    </thead>
+    <tbody>
+
+
+      <% @rooms.each do |room| %>
+        <%= render room %>
+      <% end %>
+    </tbody>
+  </table>
+</div>

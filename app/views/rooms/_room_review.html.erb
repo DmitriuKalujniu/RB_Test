@@ -1,0 +1,13 @@
+<div class="col d-flex align-items-start">
+
+  <div>
+    <h3 class="fs-2">
+      <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3" style="max-width: 50px">
+        <img src="<%= review.user_picture %>" class="bi" width="100%">
+      </div>
+      <%= review.reviewer_name %>
+    </h3>
+    <h5><%= review.created %></h5>
+    <p><%= review.comment %></p>
+  </div>
+</div>
